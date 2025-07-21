@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binadam Sdn Bhd – Power & Fibre Specialists</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0066b2;      /* Binadam corporate blue */
+      --dark: #1f2937;         /* Neutral dark for text */
+      --light: #f9fafb;        /* Section background */
+      --accent: #fbbf24;       /* Safety‑vest yellow for highlights */
+    }
+
+    * {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif;}
+
+    body {color: var(--dark); line-height: 1.6; background-color: var(--light);} 
+
+    /* ---------- NAV ---------- */
+    header {background: rgba(0,0,0,0.6); position: fixed; width: 100%; z-index: 1000;}
+    nav {max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem;}
+    nav a.logo {color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none;}
+    ul.nav-links {list-style: none; display: flex; gap: 1.5rem;}
+    ul.nav-links a {color: #fff; text-decoration: none; font-weight: 600; transition: opacity .2s;}
+    ul.nav-links a:hover {opacity: .7;}
+
+    /* ---------- HERO ---------- */
+    .hero {height: 90vh; background: url('images/hero.jpg') center/cover no-repeat; display: flex; align-items: center;}
+    .hero-overlay {background: rgba(0,0,0,.55); width: 100%; height: 100%; display: flex; align-items: center;}
+    .hero-content {max-width: 1200px; margin: 0 auto; color: #fff; padding: 2rem;}
+    .hero h1 {font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: .75rem;}
+    .hero p {font-size: 1.125rem; max-width: 600px;}
+    .btn-primary {display: inline-block; background: var(--accent); color: #000; padding: .75rem 1.5rem; margin-top: 1.5rem; font-weight: 600; border-radius: .5rem; text-decoration: none; transition: transform .2s;}
+    .btn-primary:hover {transform: translateY(-2px);}
+
+    /* ---------- SECTIONS ---------- */
+    section {padding: 4.5rem 1rem;}
+    .section-inner {max-width: 1100px; margin: 0 auto;}
+    h2.section-title {font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary);} 
+    p.section-lead {font-size: 1.125rem; margin-bottom: 2rem;}
+
+    /* ---------- SERVICES ---------- */
+    .services-grid {display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));}
+    .service-card {background: #fff; padding: 2rem; border-radius: .75rem; box-shadow: 0 2px 6px rgba(0,0,0,.08); transition: transform .2s;}
+    .service-card:hover {transform: translateY(-4px);} 
+    .service-card h3 {margin-bottom: .75rem; font-size: 1.25rem;}
+
+    /* ---------- PROJECTS ---------- */
+    .projects-grid {display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr));}
+    .project-figure {overflow: hidden; border-radius: .75rem; position: relative;}
+    .project-figure img {width: 100%; height: 100%; object-fit: cover; transition: transform .4s;}
+    .project-figure:hover img {transform: scale(1.08);} 
+    .project-caption {position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.6); color: #fff; padding: .5rem 1rem; font-size: .9rem; opacity: 0; transition: opacity .3s;}
+    .project-figure:hover .project-caption {opacity: 1;}
+
+    /* ---------- CONTACT ---------- */
+    .contact-info {display: flex; flex-direction: column; gap: .5rem;}
+    .contact-info a {color: var(--primary); text-decoration: none;}
+
+    /* ---------- FOOTER ---------- */
+    footer {background: #111827; color: #d1d5db; text-align: center; padding: 2rem 1rem; font-size: .875rem;}
+    footer a {color: var(--accent); text-decoration: none;}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <a href="#home" class="logo">Binadam Sdn Bhd</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Building Malaysia’s Power &amp; Fibre Backbone</h1>
+        <p>Your G7‑certified partner for high‑voltage transmission, OPGW fibre, and integrated telecom solutions.</p>
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-lead">Binadam Sdn Bhd is a Malaysian‑owned engineering contractor with <strong>CIDB G7</strong> grading—the nation’s highest certification—specialising in power transmission, optical ground wire (OPGW) installation, and fibre‑optic network integration for utilities & telcos.</p>
+      <p>For over three decades we’ve partnered with <strong>TNB, SESB, Telekom Malaysia, Digi, and Time</strong>, delivering turnkey infrastructure that connects communities, fuels economic growth, and supports Malaysia’s digital future. Our safety‑first culture, certified Work‑At‑Height (WAH) crews, and in‑house fleet ensure every project is delivered on time, on budget, and with zero compromise on quality.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background: #fff;">
+    <div class="section-inner">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>OPGW &amp; Live‑Line Installation</h3>
+          <p>Design, supply, and install Optical Ground Wire (OPGW) along high‑voltage lines using live‑line techniques to minimise outages.</p>
+        </div>
+        <div class="service-card">
+          <h3>Transmission Tower Works</h3>
+          <p>Erection, stringing, and maintenance of 132kV &amp; 275kV lattice and monopole towers, including tension and suspension types.</p>
+        </div>
+        <div class="service-card">
+          <h3>Telco Fibre Panels &amp; Splicing</h3>
+          <p>End‑to‑end fibre distribution systems for telcos—panels, splicing, OTDR testing, and commissioning.</p>
+        </div>
+        <div class="service-card">
+          <h3>Smart Grid &amp; SCADA Integration</h3>
+          <p>Deploy secure fibre backbones and IoT sensors enabling real‑time monitoring, fault detection, and substation automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">Highlighted Projects</h2>
+      <p class="section-lead">A glimpse of our recent on‑ground achievements across Malaysia.</p>
+      <div class="projects-grid">
+        <!-- Repeat project blocks as needed -->
+        <figure class="project-figure">
+          <img src="images/bina6.jpg" alt="Substation inspection" />
+          <figcaption class="project-caption">132kV Substation OPGW Commissioning – Selangor</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/bina5.jpg" alt="Fibre reels for deployment" />
+          <figcaption class="project-caption">OPGW Cable Logistics – Central Region</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/bina4.jpg" alt="Road‑side fibre works" />
+          <figcaption class="project-caption">Roadside Fibre Pulling – Sabah</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/bina1.jpg" alt="Crew safety briefing" />
+          <figcaption class="project-caption">Safety Briefing &amp; WAH Training – Johor</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background: #fff;">
+    <div class="section-inner">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-lead">Ready to collaborate or have a question about our services? Reach out—we’ll respond within one business day.</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:info@binadam.com.my">info@binadam.com.my</a></p>
+        <p><strong>Phone:</strong> +60&nbsp;3‑1234&nbsp;5678</p>
+        <p><strong>Head Office:</strong> Jalan Teknologi 3/5, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year">2025</span> Binadam Sdn Bhd. All rights reserved.
+  </footer>
+
+  <script>
+    // Update footer year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
