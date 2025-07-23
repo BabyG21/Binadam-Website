@@ -60,6 +60,17 @@
       .nav-cta:hover{transform:translateY(-2px)}
     }
 
+    /* Hide the Contact link on desktop ≥900px */
+@media(min-width:900px){
+  .mob-contact{ display:none; }
+}
+
+    /* Optional: make sure the link is visible on mobile (default) */
+    @media(max-width:899px){
+      .mob-contact{ display:block; }
+    }
+
+
     /* --- MOBILE NAV --- */
     .nav-toggle{
       background:none;border:none;color:#fff;font-size:1.8rem;
@@ -236,12 +247,14 @@
     <!-- hamburger button -->
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
   
+
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li> 
+      <li class="mob-contact"><a href="#contact">Contact</a></li>
     </ul>
+    
 
     <!--desktop‑only call‑to‑action -->
     <a href="#contact" class="nav-cta">Contact&nbsp;Now</a>
@@ -468,6 +481,16 @@
     links.classList.toggle('active');
   });
 </script>
+
+<script>
+  /* close mobile menu when a link is tapped */
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+    });
+  });
+</script>
+
 
   
 </body>
